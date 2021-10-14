@@ -9,7 +9,7 @@ import (
 	"github.com/thong2802/golang_api/service"
 )
 
-// AuthorizeJWT validate y
+// AuthorizeJWT validate the token user given, return 401 if not vailid.
 func AuthorizeJWT(jwtService service.JWTService) gin.HandlerFunc {
 	return func(c *gin.Context) { 
 	authHeader := c.GetHeader("Authorization")
